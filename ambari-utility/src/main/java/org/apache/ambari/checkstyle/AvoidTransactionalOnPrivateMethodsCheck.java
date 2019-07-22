@@ -51,25 +51,8 @@ public class AvoidTransactionalOnPrivateMethodsCheck extends AbstractCheck {
   public void visitToken(DetailAST ast) {
 
  
- /*System.out.println("");
- System.out.println(""); 
- System.out.println(""); 
-System.out.println(""); 
-System.out.println(""); 
- System.out.println("");
- System.out.println(""); 
- System.out.println(""); 
-System.out.println(""); 
-System.out.println(""); 
-System.out.println(""); 
- System.out.println("");
- System.out.println(""); 
- System.out.println(""); 
-System.out.println(""); 
-System.out.println(""); 
-*/
-
  
+  
     DetailAST modifiers = ast.findFirstToken(TokenTypes.MODIFIERS);
     if (modifiers.findFirstToken(TokenTypes.LITERAL_PRIVATE) != null) {
       DetailAST annotation = modifiers.findFirstToken(TokenTypes.ANNOTATION);
