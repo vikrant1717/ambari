@@ -50,7 +50,8 @@ public class AvoidTransactionalOnPrivateMethodsCheck extends AbstractCheck {
   @Override
   public void visitToken(DetailAST ast) {
 
- System.out.println("");
+ 
+ 
 
 
  
