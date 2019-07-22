@@ -54,8 +54,6 @@ public class AvoidTransactionalOnPrivateMethodsCheck extends AbstractCheck {
 /* System.out.println(""); */
 /* System.out.println(""); */
  System.out.println(""); 
-System.out.println(""); 
-System.out.println(""); 
 
 
  
