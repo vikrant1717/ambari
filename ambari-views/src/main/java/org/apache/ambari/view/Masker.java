@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+int i;
 package org.apache.ambari.view;
 
 /**
@@ -39,5 +39,13 @@ public interface Masker {
    * @return the unmasked value
    * @throws MaskException error happened during unmasking process
    */
+   /**
+   * Get the original string from a masked string.
+   *
+   * @param value the value to be unmasked
+   * @return the unmasked value
+   * @throws MaskException error happened during unmasking process
+   */
+  
   public String unmask(String value) throws MaskException;
 }
