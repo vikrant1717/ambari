@@ -51,8 +51,13 @@ public class AvoidTransactionalOnPrivateMethodsCheck extends AbstractCheck {
   public void visitToken(DetailAST ast) {
 
  
-/* System.out.println(""); */
-/* System.out.println(""); */
+ System.out.println("");
+ System.out.println(""); 
+ System.out.println(""); 
+System.out.println(""); 
+System.out.println(""); 
+ System.out.println("");
+ System.out.println(""); 
  System.out.println(""); 
 System.out.println(""); 
 System.out.println(""); 
