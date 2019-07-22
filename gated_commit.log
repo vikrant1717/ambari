@@ -1,0 +1,238 @@
+2019-07-22 01:59:48,364 main ERROR Unable to create file /opt/gamma/logs/coronacli.log java.io.IOException: Permission denied
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory.createManager(RollingFileManager.java:574)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory.createManager(RollingFileManager.java:554)
+	at org.apache.logging.log4j.core.appender.AbstractManager.getManager(AbstractManager.java:112)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.getManager(OutputStreamManager.java:114)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager.getFileManager(RollingFileManager.java:155)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:131)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:60)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:122)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.cli.main.CLIMain.<clinit>(CLIMain.java:17)
+
+2019-07-22 01:59:48,387 main ERROR Unable to inject fields into builder class for plugin type class org.apache.logging.log4j.core.appender.RollingFileAppender, element RollingFile. java.lang.IllegalStateException: ManagerFactory [org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory@458c1321] unable to create manager for [/opt/gamma/logs/coronacli.log] with data [org.apache.logging.log4j.core.appender.rolling.RollingFileManager$FactoryData@11438d26[pattern=/opt/gamma/logs/archives/coronacli-%i.log.gz, append=true, bufferedIO=true, bufferSize=8192, policy=CompositeTriggeringPolicy(policies=[SizeBasedTriggeringPolicy(size=20971520)]), strategy=DefaultRolloverStrategy(min=1, max=5, useMax=true), advertiseURI=null, layout=%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level [%X{session}] %logger{36} - %msg%n]]
+	at org.apache.logging.log4j.core.appender.AbstractManager.getManager(AbstractManager.java:114)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.getManager(OutputStreamManager.java:114)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager.getFileManager(RollingFileManager.java:155)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:131)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:60)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:122)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.cli.main.CLIMain.<clinit>(CLIMain.java:17)
+
+2019-07-22 01:59:48,398 main ERROR Unable to invoke factory method in class class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile. java.lang.IllegalStateException: No factory method found for class org.apache.logging.log4j.core.appender.RollingFileAppender
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.findFactoryMethod(PluginBuilder.java:224)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:130)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.cli.main.CLIMain.<clinit>(CLIMain.java:17)
+
+2019-07-22 01:59:48,419 main ERROR Null object returned for RollingFile in Appenders.
+2019-07-22 01:59:48,452 main ERROR Unable to locate appender "main" for logger config "root"
+2019-07-22 01:59:49.034 [main] INFO  [] com.acellere.corona.commons.utils.FileUtility - Creating dir /home/osboxes/Desktop/ambari/Gamma if does not exists and marking with write permission
+2019-07-22 01:59:49.081 [main] INFO  [] com.acellere.corona.commons.utils.FileUtility - Creating dir /home/osboxes/Desktop/ambari/Gamma/4s7r00it0utb8oican3uu13ti if does not exists and marking with write permission
+2019-07-22 01:59:52.637 [main] INFO  [] com.acellere.corona.cli.main.CLIMain - Started Analysis
+2019-07-22 01:59:52.790 [Thread-3] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-status]: Starting proxy
+2019-07-22 01:59:52.793 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Started listener: MT: [scan-status@tcp://localhost:62046]
+2019-07-22 01:59:52.796 [main] INFO  [] com.acellere.corona.cli.main.PluginService - Starting pluginsvc
+2019-07-22 01:59:52.793 [Thread-4] INFO  [scan-status] com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status]: Server worker started
+2019-07-22 01:59:54,996 main ERROR Unable to create file /opt/gamma/corona/logs/pluginsvc.log java.io.IOException: Could not create directory /opt/gamma/corona/logs
+	at org.apache.logging.log4j.core.util.FileUtils.mkdir(FileUtils.java:119)
+	at org.apache.logging.log4j.core.util.FileUtils.makeParentDirs(FileUtils.java:136)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory.createManager(RollingFileManager.java:573)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory.createManager(RollingFileManager.java:554)
+	at org.apache.logging.log4j.core.appender.AbstractManager.getManager(AbstractManager.java:112)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.getManager(OutputStreamManager.java:114)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager.getFileManager(RollingFileManager.java:155)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:131)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:60)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:122)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.pluginsvc.PluginSvc.<clinit>(PluginSvc.java:27)
+
+2019-07-22 01:59:55,019 main ERROR Unable to inject fields into builder class for plugin type class org.apache.logging.log4j.core.appender.RollingFileAppender, element RollingFile. java.lang.IllegalStateException: ManagerFactory [org.apache.logging.log4j.core.appender.rolling.RollingFileManager$RollingFileManagerFactory@42eca56e] unable to create manager for [/opt/gamma/corona/logs/pluginsvc.log] with data [org.apache.logging.log4j.core.appender.rolling.RollingFileManager$FactoryData@52f759d7[pattern=/opt/gamma/corona/logs/archives/pluginsvc-%i.log.gz, append=true, bufferedIO=true, bufferSize=8192, policy=CompositeTriggeringPolicy(policies=[SizeBasedTriggeringPolicy(size=20971520)]), strategy=DefaultRolloverStrategy(min=1, max=5, useMax=true), advertiseURI=null, layout=%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n]]
+	at org.apache.logging.log4j.core.appender.AbstractManager.getManager(AbstractManager.java:114)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.getManager(OutputStreamManager.java:114)
+	at org.apache.logging.log4j.core.appender.rolling.RollingFileManager.getFileManager(RollingFileManager.java:155)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:131)
+	at org.apache.logging.log4j.core.appender.RollingFileAppender$Builder.build(RollingFileAppender.java:60)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:122)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.pluginsvc.PluginSvc.<clinit>(PluginSvc.java:27)
+
+2019-07-22 01:59:55,030 main ERROR Unable to invoke factory method in class class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile. java.lang.IllegalStateException: No factory method found for class org.apache.logging.log4j.core.appender.RollingFileAppender
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.findFactoryMethod(PluginBuilder.java:224)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:130)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:952)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:892)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:884)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:508)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:232)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:244)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:545)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:617)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:634)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:229)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:152)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:551)
+	at com.acellere.corona.pluginsvc.PluginSvc.<clinit>(PluginSvc.java:27)
+
+2019-07-22 01:59:55,046 main ERROR Null object returned for RollingFile in Appenders.
+2019-07-22 01:59:55,085 main ERROR Unable to locate appender "main" for logger config "root"
+2019-07-22 01:59:55.410 [main] INFO  com.acellere.corona.scanctrl.util.ScanBoxCfg - Working Directory = /home/osboxes/Desktop/ambari
+2019-07-22 01:59:55.616 [main] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Connected to: [scanbox-reporter@tcp://localhost:62046]
+2019-07-22 01:59:55.709 [Thread-2] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-ctrl]: Starting proxy
+2019-07-22 01:59:55.711 [main] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Started listener: MT: [scan-ctrl@tcp://localhost:60524]
+2019-07-22 01:59:55.718 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-ctrl]: Server worker started
+2019-07-22 01:59:57.182 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Connected to: [scan-reqt-plugin@tcp://localhost:60524]
+2019-07-22 01:59:57.494 [main] INFO  com.acellere.corona.pluginsvc.scan.ScanCtrl - started listening
+2019-07-22 01:59:57.521 [Thread-4] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null]: Starting proxy
+2019-07-22 01:59:57.524 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Started listener: MT: [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null@tcp://localhost:60225]
+2019-07-22 01:59:57.539 [Thread-5] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status/sid=va3twyand37276cl2xnm33opu, pid=null]: Server worker started
+2019-07-22 01:59:57.703 [Thread-3] INFO  com.acellere.corona.commons.analyseropt.AnalyserCfg - Loading config from: /opt/gamma/corona/pluginsvc/config/analyser.properties
+2019-07-22 01:59:57.742 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Connected to: [scan-status@tcp://localhost:60225]
+2019-07-22 01:59:57.777 [Thread-7] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [analyser-data]: Starting proxy
+2019-07-22 01:59:57.777 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Started listener: MT: [analyser-data@tcp://localhost:64820]
+2019-07-22 01:59:57.785 [Thread-3] INFO  com.acellere.corona.db.init.H2Utils - projectName=4s7r00it0utb8oican3uu13ti
+2019-07-22 01:59:57.794 [Thread-8] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-data]: Server worker started
+2019-07-22 01:59:57.804 [Thread-3] INFO  com.acellere.corona.db.init.H2Utils - dataDir=/home/osboxes/Desktop/ambari/Gamma/4s7r00it0utb8oican3uu13ti
+2019-07-22 01:59:57.841 [Thread-3] INFO  com.acellere.corona.db.init.H2Utils - projectName=4s7r00it0utb8oican3uu13ti
+2019-07-22 01:59:57.841 [Thread-3] INFO  com.acellere.corona.db.init.H2Utils - dataDir=/home/osboxes/Desktop/ambari/Gamma/4s7r00it0utb8oican3uu13ti
+2019-07-22 01:59:57.843 [Thread-3] INFO  com.acellere.corona.db.H2ReadDbSession - Data store: jdbc:h2:/home/osboxes/Desktop/ambari/Gamma/4s7r00it0utb8oican3uu13ti/4s7r00it0utb8oican3uu13ti/rd_corona.db;user=coronadb;password=coronadb;WRITE_DELAY=25000
+2019-07-22 01:59:58.387 [Thread-3] INFO  com.acellere.corona.db.init.H2DbInit - Initializing data store
+2019-07-22 01:59:59.053 [Thread-3] INFO  com.acellere.corona.db.init.H2DbInit - Data store setup complete
+2019-07-22 01:59:59.780 [Thread-11] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [analyser-ctrl]: Starting proxy
+2019-07-22 01:59:59.784 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Started listener: MT: [analyser-ctrl@tcp://localhost:59345]
+2019-07-22 01:59:59.784 [Thread-3] INFO  com.acellere.corona.analyser.Analyser2 - Started analyser
+2019-07-22 01:59:59.785 [Thread-3] INFO  com.acellere.corona.analyser.executor.StatusReporter - Reporting AnalyserInitialized
+2019-07-22 01:59:59.806 [Thread-12] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-ctrl]: Server worker started
+2019-07-22 01:59:59.816 [Thread-5] INFO  com.acellere.corona.scanctrl.core.AnalyserCtrl - Analyser initialized: null, tcp://localhost:59345
+2019-07-22 01:59:59.835 [Thread-3] INFO  com.acellere.corona.scanctrl.util.ScanBoxCfg - Setting ZMQTimeout for analyser to 240000
+2019-07-22 01:59:59.844 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Connected to: [scanbox -> analyser@tcp://localhost:59345]
+2019-07-22 01:59:59.847 [Thread-3] INFO  com.acellere.corona.pluginsvc.scan.SessionCtrl - Created new session: va3twyand37276cl2xnm33opu
+2019-07-22 02:00:02.071 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Disposed: [scan-reqt-plugin@tcp://localhost:60524]
+2019-07-22 02:00:02.071 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopping listener: MT: [scan-status@tcp://localhost:62046]
+2019-07-22 02:00:02.074 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Disposed: [scanbox-reporter@tcp://localhost:62046]
+2019-07-22 02:00:02.094 [Thread-3] INFO  com.acellere.corona.db.H2ReadDbSession - Shutdown model database
+2019-07-22 02:00:02.094 [Thread-3] INFO  com.acellere.corona.analyser.executor.Executor2 - Stopping data end-point
+2019-07-22 02:00:02.094 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopping listener: MT: [analyser-data@tcp://localhost:64820]
+2019-07-22 02:00:02.325 [Thread-4] INFO  [scan-status] com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status]: Server worker Exiting
+2019-07-22 02:00:02.328 [Thread-4] INFO  [scan-status] com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status]: Server worker Finished
+2019-07-22 02:00:02.339 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Destroying context: MT: [scan-status@tcp://localhost:62046]
+2019-07-22 02:00:02.350 [Thread-3] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-status]: Finished proxy
+2019-07-22 02:00:02.367 [main] INFO  [] com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopped listener: MT: [scan-status@tcp://localhost:62046]
+2019-07-22 02:00:02.367 [main] ERROR [] com.acellere.corona.cli.main.CLIMain - Error while analysing...
+com.acellere.corona.cli.exception.CLIException: Invalid user or unable to connect to Gamma
+	at com.acellere.corona.cli.main.CLIExecutor.validateUser(CLIExecutor.java:86) ~[coronacli-1.7.1.0-SNAPSHOT.jar:?]
+	at com.acellere.corona.cli.main.CLIExecutor.analyse(CLIExecutor.java:92) ~[coronacli-1.7.1.0-SNAPSHOT.jar:?]
+	at com.acellere.corona.cli.main.CLIProcessor.run(CLIProcessor.java:55) ~[coronacli-1.7.1.0-SNAPSHOT.jar:?]
+	at com.acellere.corona.cli.main.CLIMain.main(CLIMain.java:31) [coronacli-1.7.1.0-SNAPSHOT.jar:?]
+2019-07-22 02:00:02.810 [Thread-8] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-data]: Server worker Exiting
+2019-07-22 02:00:02.819 [Thread-8] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-data]: Server worker Finished
+2019-07-22 02:00:02.820 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Destroying context: MT: [analyser-data@tcp://localhost:64820]
+2019-07-22 02:00:02.822 [Thread-7] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [analyser-data]: Finished proxy
+2019-07-22 02:00:02.847 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopped listener: MT: [analyser-data@tcp://localhost:64820]
+2019-07-22 02:00:02.847 [Thread-3] INFO  com.acellere.corona.analyser.executor.Executor2 - Stopped data end-point
+2019-07-22 02:00:02.848 [Thread-3] INFO  com.acellere.corona.analyser.executor.Executor2 - Disposing: null
+2019-07-22 02:00:02.848 [Thread-3] INFO  com.acellere.corona.analyser.executor.Executor2 - Disposed: null
+2019-07-22 02:00:02.848 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopping listener: MT: [analyser-ctrl@tcp://localhost:59345]
+2019-07-22 02:00:03.818 [Thread-12] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-ctrl]: Server worker Exiting
+2019-07-22 02:00:03.826 [Thread-12] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=analyser-ctrl]: Server worker Finished
+2019-07-22 02:00:03.827 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Destroying context: MT: [analyser-ctrl@tcp://localhost:59345]
+2019-07-22 02:00:03.828 [Thread-11] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [analyser-ctrl]: Finished proxy
+2019-07-22 02:00:03.864 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopped listener: MT: [analyser-ctrl@tcp://localhost:59345]
+2019-07-22 02:00:03.870 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Disposed: [scanbox -> analyser@tcp://localhost:59345]
+2019-07-22 02:00:03.871 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopping listener: MT: [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null@tcp://localhost:60225]
+2019-07-22 02:00:04.839 [Thread-5] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status/sid=va3twyand37276cl2xnm33opu, pid=null]: Server worker Exiting
+2019-07-22 02:00:04.843 [Thread-5] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-status/sid=va3twyand37276cl2xnm33opu, pid=null]: Server worker Finished
+2019-07-22 02:00:04.844 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Destroying context: MT: [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null@tcp://localhost:60225]
+2019-07-22 02:00:04.847 [Thread-4] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null]: Finished proxy
+2019-07-22 02:00:04.880 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopped listener: MT: [scan-status/sid=va3twyand37276cl2xnm33opu, pid=null@tcp://localhost:60225]
+2019-07-22 02:00:04.880 [Thread-3] INFO  com.acellere.corona.pluginsvc.scan.SessionCtrl - Disposed session: va3twyand37276cl2xnm33opu
+2019-07-22 02:00:04.880 [Thread-3] INFO  com.acellere.corona.pluginsvc.PluginSvc - Notifing done signal for activity thread
+2019-07-22 02:00:04.880 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopping listener: MT: [scan-ctrl@tcp://localhost:60524]
+2019-07-22 02:00:14.881 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Destroying context: MT: [scan-ctrl@tcp://localhost:60524]
+2019-07-22 02:00:14.883 [Thread-2] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqProxy - ZmqProxy [scan-ctrl]: Finished proxy
+2019-07-22 02:00:14.890 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ZmqListenerMT - Stopped listener: MT: [scan-ctrl@tcp://localhost:60524]
+2019-07-22 02:00:14.895 [Thread-3] INFO  com.acellere.corona.pluginsvc.scan.ScanCtrl - stopped listening
+2019-07-22 02:00:14.903 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.ZmqRequestor - Disposed: [scanbox-reporter@tcp://localhost:62046]
+2019-07-22 02:00:14.905 [Thread-3] WARN  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-ctrl]: Exiting processing loop
+org.zeromq.ZMQException: Errno 156384765
+	at org.zeromq.ZMQ$Socket.mayRaise(ZMQ.java:1474) ~[jeromq-0.4.0.jar:?]
+	at org.zeromq.ZMQ$Socket.send(ZMQ.java:1324) ~[jeromq-0.4.0.jar:?]
+	at org.zeromq.ZFrame.send(ZFrame.java:131) ~[jeromq-0.4.0.jar:?]
+	at com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker.sendResponse(ServerWorker.java:113) ~[cmx-1.7.1.0-SNAPSHOT.jar:?]
+	at com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker.run(ServerWorker.java:80) [cmx-1.7.1.0-SNAPSHOT.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_162]
+2019-07-22 02:00:14.955 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-ctrl]: Server worker Exiting
+2019-07-22 02:00:14.959 [Thread-3] INFO  com.acellere.corona.cmx.messaging.zmq.mt.ServerWorker - ServerWorker [name=scan-ctrl]: Server worker Finished
+2019-07-22 02:00:14.972 [Thread-1] INFO  com.acellere.corona.pluginsvc.PluginSvc - W: interrupt received, killing server…
+2019-07-22 02:00:14.983 [Thread-1] INFO  com.acellere.corona.pluginsvc.scan.ScanCtrl - stopped listening
