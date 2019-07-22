@@ -48,3 +48,5 @@ public class NoSuchResourceException extends Exception {
     return resourceId;
   }
 }
+}
+}
