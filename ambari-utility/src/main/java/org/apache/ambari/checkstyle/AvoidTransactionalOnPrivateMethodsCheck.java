@@ -70,6 +70,12 @@ System.out.println("");
         }
         annotation = annotation.getNextSibling();
       }
+public class foo{
+
+protected void finalize() {}
+}
+
+
     }
   }
 
