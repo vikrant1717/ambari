@@ -1,0 +1,47 @@
+{
+  "added": {
+    "criticality": {
+      "critical": {
+        "error_threshold": 0
+      },
+      "high": {
+        "error_threshold": 0
+      },
+      "medium": {
+        "error_threshold": 100
+      },
+      "low": {
+        "error_threshold": 0
+      },
+      "info": {
+        "error_threshold": 0
+      }
+    },
+    "issues": [
+      
+    ]
+  },
+  "existing": {
+    "criticality": {
+      "critical": {
+        "error_threshold": 0
+      },
+      "high": {
+        "error_threshold": 0
+      },
+      "medium": {
+        "error_threshold": 100
+      },
+      "low": {
+        "error_threshold": 0
+      },
+      "info": {
+        "error_threshold": 0
+      }
+    },
+    "issues": [
+      
+    ]
+  }
+}
+
