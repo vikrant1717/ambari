@@ -22,6 +22,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+
+int i;
+int j;
 /**
  * Provider of Input stream for Ambari cluster
  */
