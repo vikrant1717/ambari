@@ -51,7 +51,7 @@ public class AvoidTransactionalOnPrivateMethodsCheck extends AbstractCheck {
   public void visitToken(DetailAST ast) {
 
  
- int i;
+ int j;
 
 
  
