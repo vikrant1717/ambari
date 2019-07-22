@@ -17,6 +17,7 @@
  */
 
 package org.apache.ambari.view;
+int i;
 
 /**
  * Interface for main view class.
