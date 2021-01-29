@@ -65,6 +65,7 @@ public class ZkMigrator {
       System.out.println("Could not delete " + znode + ". Reason: " + e.getMessage());
     } finally {
       client.close();
+      //commented code
     }
   }
 
